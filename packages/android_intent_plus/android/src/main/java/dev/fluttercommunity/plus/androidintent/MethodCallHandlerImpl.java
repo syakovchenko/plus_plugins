@@ -93,10 +93,10 @@ public final class MethodCallHandlerImpl implements MethodCallHandler {
 
     if ("launch".equalsIgnoreCase(call.method)) {
 
-      if (intent != null && !sender.canResolveActivity(intent)) {
-        Log.i(TAG, "Cannot resolve explicit intent, falling back to implicit");
-        intent.setPackage(null);
-      }
+      //if (intent != null && !sender.canResolveActivity(intent)) {
+        //Log.i(TAG, "Cannot resolve explicit intent, falling back to implicit");
+      //  intent.setPackage(null);
+      //}
 
       sender.send(intent);
       result.success(null);
